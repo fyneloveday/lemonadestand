@@ -20,7 +20,17 @@ namespace LemonadeStand
         {
             int numberOfLemons;
             Console.WriteLine();
+            int numberOfSugar;
+            Console.WriteLine();
+            int numberOfIce;
+            Console.WriteLine();
+            int numberOfCups;
+            Console.WriteLine();
+
+            Console.ReadLine();
         }
+
+
 
     }
 }

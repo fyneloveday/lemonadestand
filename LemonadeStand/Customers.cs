@@ -5,4 +5,10 @@ using System.Text;
 
 namespace LemonadeStand
 {
+    public class Customer
+   
+    {
+        
+    }
+
 }

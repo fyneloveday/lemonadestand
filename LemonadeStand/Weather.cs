@@ -7,16 +7,28 @@ namespace LemonadeStand
 {
     public class Weather
     {
-        private readonly List<string> weatherConditions = new List<string> { "Rainy", "Sunny", "Cloudy" };
-        public Weather()
+        public List<string> weatherConditions = new List<string> { "Rainy", "Sunny", "Cloudy" };
+
+
+        public int temperature;
+        public int condition;
+
+        public void getTemperature()
+        {
+            Random rnd = new Random();
+            temperature = rnd.Next(40, 100);
+        }
+
+            public Weather()
         {
 
         }
+        
 
         public void GetCondition()
         {
             Random rnd = new Random();
-            int condition = rnd.Next(0, 2);
+            condition = rnd.Next(0, 2);
             Console.WriteLine("Today's weather forecast is " + weatherConditions[condition]);
 
             Console.ReadLine();

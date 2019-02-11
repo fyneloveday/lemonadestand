@@ -8,20 +8,22 @@ namespace LemonadeStand
     public class Player
     {
         public double capital = 20;
-        Inventory inventory;
-        lemonadeMix lemonadeMix;
+        public Inventory inventory;
+        public LemonadeMix lemonadeMix;
+
         public Player()
         {
             inventory = new Inventory();
+            lemonadeMix = new LemonadeMix();
         }
 
        
 
-        public void BuySugar()
+        public void BuySugar(Store store)
         {
             Console.WriteLine("How much sugar do you want: ");
             int sugarAmount = Convert.ToInt32(Console.ReadLine());
-            capital = capital - (sugarAmount * inventory.sugar.ingredientPrice);
+            capital = capital - (sugarAmount * store.sugarPrice);
             Console.WriteLine("You have " + capital);
             
             for(int i = 0; i < sugarAmount; i ++)
@@ -33,11 +35,11 @@ namespace LemonadeStand
 
         }
 
-        public void BuyLemons()
+        public void BuyLemons(Store store)
         {
             Console.WriteLine("How much lemons do you want: ");
             int lemonsAmount = Convert.ToInt32(Console.ReadLine());
-            capital = capital - (lemonsAmount * inventory.sugar.ingredientPrice);
+            capital = capital - (lemonsAmount * store.lemonsPrice);
             Console.WriteLine("You have " + capital);
 
             for (int i = 0; i < lemonsAmount; i++)
@@ -49,11 +51,11 @@ namespace LemonadeStand
 
         }
 
-        public void BuyCups()
+        public void BuyCups(Store store)
         {
             Console.WriteLine("How many cups do you want: ");
             int cupsAmount = Convert.ToInt32(Console.ReadLine());
-            capital = capital - (cupsAmount * inventory.cups.ingredientPrice);
+            capital = capital - (cupsAmount * store.cupsPrice);
             Console.WriteLine("You have " + capital);
 
             for (int i = 0; i < cupsAmount; i++)
@@ -65,11 +67,11 @@ namespace LemonadeStand
 
         }
 
-        public void BuyIce()
+        public void BuyIce(Store store)
         {
             Console.WriteLine("How much ice do you want: ");
             int iceAmount = Convert.ToInt32(Console.ReadLine());
-            capital = capital - (iceAmount * inventory.ice.ingredientPrice);
+            capital = capital - (iceAmount * store.icePrice);
             Console.WriteLine("You have " + capital);
 
             for (int i = 0; i < iceAmount; i++)

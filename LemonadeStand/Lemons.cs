@@ -5,9 +5,8 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Lemons : Ingredients
+    public class Lemons
     {
         public List<Lemons> lemonList = new List<Lemons>();
-        public double ingredientPrice = 3;
     }
 }

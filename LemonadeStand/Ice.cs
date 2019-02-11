@@ -5,11 +5,10 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Ice : Ingredients
+    public class Ice 
     {
 
         public List<Ice> iceList = new List<Ice>();
-        public double ingredientPrice = 2;
 
     }
 }

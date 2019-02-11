@@ -5,10 +5,9 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Cups : Ingredients
+    public class Cups
     {
         public List<Cups> cupsList = new List<Cups>();
-        public double ingredientPrice = 3;
 
     }
 

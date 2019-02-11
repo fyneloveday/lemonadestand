@@ -11,15 +11,7 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             Game game = new Game();
-            Player player = new Player();
-            Weather weather = new Weather();
-
-            player.BuySugar();
-            player.BuyLemons();
-            player.BuyIce();
-            player.BuyCups();
-
-            weather.GetCondition();
+            game.RunGame();
         }
     }
 }
